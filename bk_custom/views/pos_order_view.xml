@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="view_pos_pos_form">
+			<field name="name">pos.order.form.view</field>
+			<field name="model">pos.order</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_pos_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//form" position="attributes">
+					<attribute name="create">false</attribute>
+					<attribute name="edit">false</attribute>
+					<attribute name="delete">false</attribute>
+				</xpath>
+				<xpath expr="//button[@name='action_invoice']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//button[@name='refund']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//button[@string='Reprint']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//field[@name='session_id']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//field[@name='partner_id']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//field[@name='name']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath
+					expr="//page[(2)]/field[@name='statement_ids']/tree/field[@name='statement_id']"
+					position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath
+					expr="//page[(2)]/field[@name='statement_ids']/tree/field[@name='journal_id']"
+					position="attributes">
+					<attribute name="string">Method</attribute>
+				</xpath>
+				<xpath expr="//page[(3)]" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//page[(3)]/group/field[@name='location_id']"
+					position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//page[(3)]/group/field[@name='picking_id']"
+					position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//page[(3)]/group/field[@name='pos_reference']"
+					position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//page[(3)]/group[@string='Accounting Information']"
+					position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+				<xpath expr="//page[(4)]" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+			</field>
+		</record>
+
+
+		<record model="ir.ui.view" id="view_pos_order_tree">
+			<field name="name">pos.order.tree.view</field>
+			<field name="model">pos.order</field>
+			<field name="inherit_id" ref="point_of_sale.view_pos_order_tree" />
+			<field name="arch" type="xml">
+				<xpath expr="//tree" position="attributes">
+					<attribute name="create">false</attribute>
+					<attribute name="edit">false</attribute>
+					<attribute name="delete">false</attribute>
+				</xpath>
+				<xpath expr="//tree/field[@name='name']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//tree/field[@name='pos_reference']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//tree/field[@name='partner_id']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//tree/field[@name='invoice_id']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//tree/field[@name='session_id']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//tree/field[@name='state']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath expr="//tree/field[@name='user_id']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>
