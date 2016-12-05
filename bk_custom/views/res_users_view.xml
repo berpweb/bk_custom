@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<record id="view_users_form_simple_modif" model="ir.ui.view">
+			<field name="name">res.users.preferences.form</field>
+			<field name="model">res.users</field>
+			<field name="inherit_id" ref="base.view_users_form_simple_modif" />
+			<field name="arch" type="xml">
+				<xpath expr="//group[(2)]" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+			</field>
+		</record>
+	    <record id="res_users_form_preference_view" model="ir.ui.view">
+	        <field name="name">res.users.form.view</field>
+	        <field name="model">res.users</field>
+	        <field name="inherit_id" ref="point_of_sale.res_users_form_preference_view" />
+	        <field name="arch" type="xml">
+	        	<xpath expr="//field[@name='pos_config']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+	        </field>
+	    </record>
+        <record id="view_users_form_preferences" model="ir.ui.view">
+            <field name="name">res.users.preferences.form</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="sales_team.view_users_form_preferences"/>
+            <field name="arch" type="xml">
+            	<xpath expr="//field[@name='default_section_id']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
+            </field>
+        </record>
+
+	</data>
+</openerp>

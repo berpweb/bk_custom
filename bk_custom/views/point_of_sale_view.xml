@@ -84,5 +84,12 @@
 				</xpath>
 			</field>
 		</record>
+		
+		<record id="point_of_sale.product_template_action" model="ir.actions.act_window">
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create"></p>
+            </field>
+        </record>
 	</data>
 </openerp>
