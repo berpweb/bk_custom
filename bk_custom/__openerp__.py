@@ -19,7 +19,6 @@
             "views/main_sub_menu.xml",
             "views/point_of_sale_view.xml",
             "views/pos_order_view.xml",
-            "views/pos_category_view.xml",
             "views/product_template_view.xml",
             "views/bk_search_view.xml",
              ],
