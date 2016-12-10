@@ -11,6 +11,7 @@
     'application': True,
     'installable': True,
     'depends': ['pos_product_template', 
+                'pos_kitchen_ticket',
                 'pos_debranding', 
                 'web_debranding',
                 'bk_custom'],

@@ -9,6 +9,9 @@
 				<xpath expr="//div[@class='oe_chatter']" position="attributes">
 					<attribute name="invisible">1</attribute>
 				</xpath>
+				<xpath expr="//field[@name='active']" position="attributes">
+					<attribute name="invisible">1</attribute>
+				</xpath>
 				<xpath expr="//div[@name='buttons']" position="attributes">
 					<attribute name="invisible">1</attribute>
 				</xpath>
@@ -28,8 +31,13 @@
 					expr="//page[@name='sales']/group/group/field[@name='pos_categ_id']"
 					position="replace">
 				</xpath>
+				<xpath
+					expr="//page[@name='sales']/group/group/field[@name='available_in_pos']"
+					position="replace">
+				</xpath>
 				<field name="list_price" position="after">
 					<field name="pos_categ_id" string="Category"/>
+					<field name="available_in_pos"/>
 				</field>
 				<xpath expr="//page[(2)]" position="attributes">
 					<attribute name="invisible">1</attribute>
