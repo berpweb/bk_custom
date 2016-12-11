@@ -30,6 +30,15 @@
 					<attribute name="groups">bk_custom.make_invisible</attribute>
 				</xpath>
 				<xpath
+					expr="//field[@name='lines']/tree/field[@name='price_subtotal']"
+					position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath
+					expr="//field[@name='amount_tax']" position="attributes">
+					<attribute name="groups">bk_custom.make_invisible</attribute>
+				</xpath>
+				<xpath
 					expr="//page[(2)]/field[@name='statement_ids']/tree/field[@name='statement_id']"
 					position="attributes">
 					<attribute name="groups">bk_custom.make_invisible</attribute>
