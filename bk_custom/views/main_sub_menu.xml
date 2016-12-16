@@ -30,6 +30,8 @@
 		</record>
 		<record model="ir.ui.menu" id="point_of_sale.menu_point_ofsale">
 			<field name="name">Sale Orders</field>
-			</record>
+		</record>
+		<menuitem parent="point_of_sale.menu_point_of_sale" id="menu_report_point_of_sale" 
+			action="point_of_sale.action_report_pos_details" sequence="100" groups="point_of_sale.group_pos_user"/>
 	</data>
 </openerp>
