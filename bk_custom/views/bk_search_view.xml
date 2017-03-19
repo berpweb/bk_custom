@@ -26,6 +26,7 @@
              <field name="model">product.template</field>
              <field name="arch" type="xml">
              	<search string="Search Products">
+                    <field name="pos_categ_id" />
                 </search>
              </field>
         </record>
